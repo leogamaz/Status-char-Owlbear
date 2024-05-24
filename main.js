@@ -2,8 +2,9 @@ import './style.css'
 import javascriptLogo from './javascript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './src/counter.js'
-//import OBR from "@owlbear-rodeo/sdk";
 import { setupContextMenu } from "./src/contextMenu.js";
+import { setupInitiativeList } from './initiativeList.js';
+import OBR from "@owlbear-rodeo/sdk";
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -27,12 +28,15 @@ setupCounter(document.querySelector('#counter'))
 
 
 
-// document.querySelector("#app").innerHTML = `
-//   <div>
-//     <h1>Initiative Tracker</h1>
-//   </div>
-// `;
 
-// OBR.onReady(() => {
-//   setupContextMenu();
-// });
+document.querySelector("#app").innerHTML = `
+  <div>
+    <h1>Initiative Tracker</h1>
+    <ul id="initiative-list"></ul>
+  </div>
+`;
+
+OBR.onReady(() => {
+  setupContextMenu();
+  setupInitiativeList(document.querySelector("#initiative-list"));
+});
