@@ -57,7 +57,7 @@ h1 {
   line-height: 1.1;
 }
 
-button {
+/* button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -74,7 +74,7 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
+} */
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -95,9 +95,9 @@ button:focus-visible {
   display: flex;
   flex-direction: row;
   align-self: start;
-  border-bottom: solid rgb(0, 250, 0);
-  margin: 10px;
-  padding: 10px;
+  border-bottom: 3px solid rgb(0, 250, 0);
+  margin: 0px;
+  padding: 15px;
 }
 
 .menu-list {
@@ -121,4 +121,142 @@ button:focus-visible {
 .menu-item {
   border: 3px solid transparent;
   border-radius: 15px;
+}
+
+.player-health-bar {
+  width: 300px;
+  height: 15px;
+  background-color: #555;
+  overflow: hidden;
+  border: 1px solid #ffffffab;
+}
+
+.player-health-fill {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right, #e00b07, #f46060);
+  transition: width 0.5s ease-in-out;
+}
+
+.player-mana-bar {
+  background-color: #555;
+  overflow: hidden;
+  border: 1px solid #ffffffab;
+}
+
+.player-mana-fill {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right, #073de0, #4ca2ed);
+  transition: width 0.5s ease-in-out;
+}
+
+.player-stamina-bar {
+  background-color: #555;
+  overflow: hidden;
+  border: 1px solid #ffffffab;
+}
+
+.player-stamina-fill {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right, #27981b, #42cb32);
+  transition: width 0.5s ease-in-out;
+}
+
+.player-status-bar {
+  width: 70px;
+  height: 10px;
+  font-size: 8pt;
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+  line-height: 9px;
+}
+
+.player-data {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 7px;
+}
+.player-label {
+  font-size: 8pt;
+}
+
+.combat-menu {
+  margin: 10px;
+  padding: 10px;
+}
+
+.player-action-list-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  width: 25px;
+  margin-top: 15px;
+}
+
+.player-action-list-button {
+  border: 1px solid rgba(255, 255, 255, 0.53);
+  padding: 3px;
+  border-radius: 8px;
+  transition: border-color 0.25s;
+}
+
+.player-action-list-button:hover {
+  border: 1px solid white;
+  padding: 3px;
+}
+
+.player-action-list-button:hover {
+  border-color: #ff6464;
+}
+.player-action-list-button:focus,
+.player-action-list-button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.player-action-list-item input {
+  border: 1px solid rgba(255, 255, 255, 0.53);
+  background-color: transparent;
+  padding: 3px;
+  border-radius: 8px;
+  outline: none; /* Remove o outline */
+  transition: border-color 0.25s;
+}
+
+.player-action-list-item input:hover {
+  border: 1px solid white;
+  padding: 3px;
+}
+
+.player-action-list-item input:hover {
+  border-color: #ff6464;
+}
+.player-action-list-item input:focus,
+.player-action-list-item input:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.player-action-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-left: -50px;
+}
+
+.order-player {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.order-player-seta{
+  cursor: pointer;
+}
+
+.player{
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgb(23, 106, 23);
 }

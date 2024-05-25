@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -10,12 +10,80 @@
     <div class="menu-bar">
       <ul class="menu-list">
         <li class="menu-item">
-          <img id="dice-icon" src="./public/dice.svg" width="20px" alt="">
+          <img id="dice-icon" src="./public/dice.svg" width="20px" alt="" />
         </li>
         <li class="menu-item">
-          <img id="person-icon" src="./public/person.svg" width="20px" alt="">
+          <img id="person-icon" src="./public/person.svg" width="20px" alt="" />
         </li>
       </ul>
+    </div>
+    <div class="combat-menu">
+      <div class="player">
+        <span class="player-data">
+          <p class="player-label">Skill</p>
+          <p class="player-label">Life:</p>
+          <div class="player-health-bar player-status-bar">
+            <div class="player-health-fill" id="health-fill">100%</div>
+          </div>
+          <p class="player-label">Mana:</p>
+          <div class="player-mana-bar player-status-bar">
+            <div class="player-mana-fill" id="mana-fill">100%</div>
+          </div>
+          <p class="player-label">Stamina:</p>
+          <div class="player-stamina-bar player-status-bar">
+            <div class="player-stamina-fill" id="stamina-fill">100%</div>
+          </div>
+          <span class="order-player">
+            <img
+              id="seta-cima"
+              class="order-player-seta"
+              src="./public/seta.svg"
+              style="transform: rotate(270deg)"
+              width="10px"
+              alt=""
+            />
+            <img
+              id="seta-baixo"
+              class="order-player-seta"
+              src="./public/seta.svg"
+              style="transform: rotate(90deg)"
+              width="10px"
+              alt=""
+            />
+          </span>
+        </span>
+        <span class="player-action">
+          <ul class="player-action-list">
+            <li class="player-action-list-item">
+              <input type="number" style="width: 50px; height: 30px" />
+              <img
+                class="player-action-list-button"
+                src="./public/blood.svg"
+                width="30px"
+                alt=""
+              />
+            </li>
+            <li class="player-action-list-item">
+              <input type="number" style="width: 50px; height: 30px" />
+              <img
+                class="player-action-list-button"
+                src="./public/potion.png"
+                width="30px"
+                alt=""
+              />
+            </li>
+            <li class="player-action-list-item">
+              <input type="number" style="width: 50px; height: 30px" />
+              <img
+                class="player-action-list-button"
+                src="./public/stamina.png"
+                width="30px"
+                alt=""
+              />
+            </li>
+          </ul>
+        </span>
+      </div>
     </div>
     <script type="module" src="/main.js"></script>
   </body>
