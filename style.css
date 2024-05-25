@@ -1,3 +1,29 @@
+/* KEYFRAMES */
+
+@keyframes color-change-2x {
+  0% {
+    background: hsla(184, 83%, 51%, 0);
+  }
+  100% {
+    background: #7070705a;
+  }
+}
+
+@keyframes scale-up-center {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -13,6 +39,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+ul {
+  list-style-type: none;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -22,45 +52,9 @@ a:hover {
   color: #535bf2;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
-}
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
 
 button {
@@ -93,4 +87,38 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+/* COMPONENTES */
+
+.menu-bar {
+  display: flex;
+  flex-direction: row;
+  align-self: start;
+  border-bottom: solid rgb(0, 250, 0);
+  margin: 10px;
+  padding: 10px;
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 15px;
+}
+
+#dice-icon {
+  padding-top: 2.5px;
+}
+
+.menu-item:hover {
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both,
+    color-change-2x 1s linear infinite alternate both;
+  cursor: pointer;
+}
+
+.menu-item {
+  border: 3px solid transparent;
+  border-radius: 15px;
 }
